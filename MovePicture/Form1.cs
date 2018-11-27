@@ -73,6 +73,59 @@ namespace MovePicture
             {
                 
             }
-        
-   }
+
+        private async void button5_Click(object sender, EventArgs e)
+
+        {
+            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 30 );
+            await Task.Delay(500);
+            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 30);
+            await Task.Delay(500);
+        }
+
+        private async void button6_Click(object sender, EventArgs e)
+  
+
+        {
+            
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 30, pictureBox1.Location.Y);
+                await Task.Delay(500);
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 30);
+                await Task.Delay(500);
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 30, pictureBox1.Location.Y);
+                await Task.Delay(500);
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 30);
+                await Task.Delay(500);
+            }
+
+            
+        }
+
+        private async void button7_Click(object sender, EventArgs e)
+        {
+             
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 30, pictureBox1.Location.Y- 30);
+                await Task.Delay(500);
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 30, pictureBox1.Location.Y + 30);
+                await Task.Delay(500);
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 30, pictureBox1.Location.Y);
+                await Task.Delay(500);
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 30, pictureBox1.Location.Y - 30);
+                await Task.Delay(500);
+            }
+        }
+
+        private async void button8_Click(object sender, EventArgs e)
+
+
+        {
+            while (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 3, pictureBox1.Location.Y);
+                await Task.Delay(5);
+            }
+        }
+    }
 }
